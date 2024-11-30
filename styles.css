@@ -1,0 +1,565 @@
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+  }
+  
+  body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    color: #333;
+  }
+  
+  /* Banner com efeito */
+  .banner {
+    position: relative;
+    height: 70vh;
+    background: url('urlaqui') no-repeat center center/cover;
+    background-image: url(https://www.honda.com.br/motos/sites/hda/files/2024-10/banner-honda-cg-160-titan-desktop_2.webp);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    text-align: center;
+   object-fit: contain;
+   animation: fadeIn 5s ease-in-out;
+  }
+  
+  .banner .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: black;
+    opacity: 0.5;
+    z-index: 1;
+  }
+  
+  
+  .banner-content {
+    position: relative;
+    z-index: 2;
+    animation: fadeIn 5s ease-in-out;
+  }
+  
+  @keyframes fadeIn {
+    0% { opacity: 0; transform: translateY(-20px); }
+    100% { opacity: 1; transform: translateY(0); }
+  }
+  
+  /* Seção do formulário */
+  .form-section {
+    display: flex;
+    width: 10vw;
+    /* Remover a altura fixa ou ajustar conforme necessário */
+    min-height: 100vh; /* Use min-height para garantir que a seção tenha pelo menos 80vh */
+    background-color: #f4f4f4; /* Cor de fundo */
+    padding: 2rem; /* Adiciona espaço interno */
+}
+  .form-section h2 {
+    margin-bottom: 1rem;
+    font-size: 2rem;
+    color: #444;
+  }
+  
+  .promo-form {
+    max-width: 400px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .promo-form label {
+    text-align: left;
+    margin-bottom: 0.5rem;
+    font-weight: bold;
+  }
+  
+  .promo-form input {
+    margin-bottom: 1rem;
+    padding: 0.5rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+  
+  .promo-form button {
+    padding: 0.7rem;
+    border: none;
+    background: rgb(238, 12, 12);
+    color: #fff;
+    font-size: 1rem;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .promo-form button:hover {
+    background: red;
+  }
+  
+  /* Responsividade */
+  /* A partir de telas menores (tablets e celulares) */
+  @media (max-width: 768px) {
+    /* Torna o banner menor para telas pequenas */
+    .banner {
+      height: 40vh;
+    }
+  
+    .banner-content h1 {
+      font-size: 1.5rem;
+      display: flex;
+      background-size: cover;
+    
+    }
+    .banner-content {
+      display: flex;
+      flex-direction: column; /* Alinha os itens em coluna */
+      align-items: center;    /* Centraliza os itens horizontalmente */
+      justify-content: center; /* Centraliza os itens verticalmente */
+      height: 100%; 
+      animation: fadeIn 5s ease-in-out;          /* Certifique-se de que o contêiner tenha altura suficiente */
+  }
+  
+  #cumpomm {
+      text-align: center; /* Centraliza o texto dentro dos elementos */
+       margin-right: -300px;
+       font-size: 15px;
+    }
+    p{
+      text-align: center;
+      
+      margin-right: -350px;
+      font-size: 5px;
+    }
+    #moto{
+      text-align: center;
+      margin-right: -350px;
+    }
+  
+    .banner-content p {
+      font-size: 1rem;
+    }
+  
+    /* Ajusta o formulário */
+    .promo-form {
+      width: 90%;
+    }
+  
+    .promo-form button {
+      font-size: 0.9rem;
+    }
+    #header{
+      display: flex;
+    }
+    #loc{
+      display: none;
+    }
+    #login{
+      display: none
+    }
+   h3{
+    display: none;
+   }
+    
+  }
+  #img{
+    
+      height: 50px;
+      width: 240px;
+      background-repeat: no-repeat;
+      background-size: cover;
+      margin: auto;
+      position: absolute;
+      left: 0;
+      right: 0;
+      transition: transform 0.3s;
+  }
+  #img:hover{
+    transform: scale(1.1);
+  }
+  #header{
+    width: 100%;
+    height: 10vh;
+    padding: 20px;
+    border-bottom: 3px solid red;
+    display: flex;
+    align-items: center;
+    flex-direction: row-reverse;
+    position: relative;
+    z-index: 2;
+    animation: fadeIn 5s ease-in-out;
+    
+  }
+  #loc{
+    width: 4vw;
+    height: 10vh;
+    margin-top: 25px;
+    background-image: url(image-Photoroom.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    transition: transform 0.3s;
+  
+  }
+  #loc:hover{
+    transform: scale(1.1);
+  }
+  h3{
+    color: red;
+    margin-right: 1px;
+    font-size: 15px;
+  }
+    a{
+     text-decoration: none;
+     transition: transform 0.3s;
+  
+    }
+      a:hover{
+        transform: scale(1.1);
+      }
+    #login{
+      position: absolute;
+      left: 30px;
+      transition: transform 0.3s;
+  
+    }
+   #login:hover{
+    transform: scale(1.4);
+   }
+    #sim{
+    height: 20px;
+    width: 20px;
+    
+  
+    
+    }
+    
+    #cumpomm{
+      display: flex;
+      margin-left: -420px;
+      font-weight:900;
+      font-size: 40px;
+      transition: transform 0.3s;
+  
+    }
+    #cumpomm:hover{
+      transform: scale(1.1);
+
+    }
+    #desconto{
+      display: flex;
+      margin-left: -420px;
+      font-size: 18px;
+      transition: transform 0.3s;
+  
+     
+    }
+    #desconto:hover{
+      transform: scale(1.1);
+    }
+    #moto{
+      display: flex;
+      margin-top: 20px;
+      margin-left: -410px;
+      background-color: red;
+      color: #fff;
+      border: none;
+      height: 30px;
+      width: 100px;
+      text-align: center;
+      font-size: 10px;
+      padding: 5px;
+      border-radius: 20px;
+      transition: transform 0.3s;
+  
+    }
+    #moto:hover{
+      transform: scale(1.1);
+    }
+   
+    
+   
+    .form-section {
+      display: flex;
+      width: 100vw;
+      height: 100vh;
+      position: relative;
+    z-index: 2;
+    animation: fadeIn 5s ease-in-out;
+    
+  
+  }
+ 
+  
+    #motim {
+      margin-left: 70px;
+      margin-top: 110px;
+      width: 48.5%; /* Ocupa 50% da largura */
+      display: flex;
+      flex-direction: column; /* Organiza as divs verticalmente */
+      height: 68vh; /* Garante que o #motim tenha 100% de altura */
+      background: linear-gradient(135deg, #f4f4f4, #e0e0e0); /* Gradiente de fundo */
+      border-radius: 15px; /* Bordas arredondadas */
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2); /* Sombra para profundidade */
+      transform: perspective(1000px) rotateX(5deg); /* Efeito 3D */
+      transition: transform 0.3s ease;
+      background-image: url(https://quatrorodas.abril.com.br/wp-content/uploads/2024/10/PROOM_Honda-CG-160-Titan-ABS_2025_-1-e1728838268311.jpg?crop=1&resize=1212,909);
+      background-repeat: no-repeat;
+      background-size: contain;
+      
+  }
+  
+  #motim:hover {
+      transform: perspective(1000px) rotateX(0deg); /* Remove a rotação ao passar o mouse */
+  }
+  
+ 
+  
+  #chama {
+      width: 50%; /* Ocupa 50% da largura */
+      padding: 2rem; /* Adiciona um pouco de espaço interno */
+      background: #f4f4f4; /* Cor de fundo para visualização */
+      margin-right: 40px;
+      height: 80vh;
+      text-align: center;
+      
+  
+      
+    }
+   
+    
+    #motim {
+      transition: transform 0.3s ease; /* Transição suave para transformações */
+  }
+  
+  #motim.animate {
+      animation: scaleUp 0.5s ease forwards; /* Animação de aumento */
+      animation-delay: 0.5s; /* Atraso de 0.5 segundos */
+  }
+  
+  @keyframes scaleUp {
+      0% { transform: scale(1); }
+      100% { transform: scale(1.1); }
+  }
+  
+  #motim:hover {
+      transform: scale(1.05); /* Aumenta ligeiramente ao passar o mouse */
+  }
+  footer{
+    background-color: #f4f4f4a7;
+    color: #333;
+    height: 20vh;
+    width: 100%;
+    display: flex;
+    position: relative;
+    z-index: 2;
+    animation: fadeIn 5s ease-in-out;
+  }
+  #logo{
+    width: 240px;
+    height: 80px;
+    padding: 1px;
+    transition: transform 0.3s;
+  
+
+  }
+  #logo:hover{
+    transform: scale(1.1);
+  }
+  #honda{
+    height: 100%;
+    width: 20%;
+   
+    margin-left: 140px;
+    display: flex; 
+    flex-direction: column;
+    align-items: center;
+
+  }
+  h4{
+    font-size: 15px;
+    font-weight: 900;
+    margin-top: 10px;
+    transition: transform 0.3s;
+  
+  }
+  h4:hover{
+    transform: scale(1.1);
+  }
+  .rede{
+    width: 50px;
+    height: 50px;
+    padding: 5px;
+    transition: transform 0.3s;
+  
+    
+  }
+  .rede:hover{
+    transform: scale(1.1);
+  }
+  #tue{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    
+  }
+  h5{
+    margin-top: 10px;
+    transition: transform 0.3s;
+  
+  }
+  h5:hover{
+    transform: scale(1.1);
+  }
+  #chama>h2{
+    transition: transform 0.3s;
+  
+  }
+  #chama>h2:hover{
+    transform: scale(1.1);
+  }
+  #name{
+    transition: transform 0.3s;
+  
+  }
+  #name:hover{
+    transform: scale(1.1);
+  }
+  .pok{
+    transition: transform 0.3s;
+  
+  }
+  .pok:hover{
+    transform: scale(1.1);
+  }
+   
+   
+   /* Responsividade para telas pequenas */
+@media (max-width: 768px) {
+  /* Ajusta o banner */
+  .banner {
+    height: 50vh;
+    background-size: cover;
+    padding: 1rem;
+  }
+
+  .banner-content {
+    text-align: center;
+    padding: 1rem;
+    flex-direction: column;
+  }
+
+  .banner-content h1 {
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+  }
+
+  .banner-content p {
+    font-size: 1rem;
+    margin-bottom: 1rem;
+  }
+
+  .banner-content button {
+    font-size: 0.9rem;
+    padding: 0.5rem 1rem;
+  }
+
+  /* Ajusta o formulário */
+  .form-section {
+    flex-direction: column;
+    padding: 1rem;
+    align-items: center;
+    min-height: 800px;
+  }
+
+  .promo-form {
+    width: 90%; /* Usa quase toda a largura disponível */
+    padding: 1rem;
+  }
+
+  .promo-form input,
+  .promo-form button {
+    width: 100%; /* Ocupa toda a largura do formulário */
+    font-size: 1rem;
+    margin-bottom: 1rem;
+  }
+
+  /* Footer responsivo */
+  footer {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 1rem;
+  }
+
+  #honda {
+    width: 100%;
+    margin-bottom: 1rem;
+  }
+
+  .rede {
+    width: 40px;
+    height: 40px;
+  }
+}
+
+/* Responsividade adicional para telas muito pequenas */
+@media (max-width: 480px) {
+  .banner-content h1 {
+    font-size: 5.5rem;
+  }
+
+  .banner-content p {
+    font-size: 0.8rem;
+  }
+
+  .banner-content button {
+    font-size: 2.8rem;
+  }
+
+  .promo-form input {
+    font-size: 0.9rem;
+  }
+  /* Ajuste do #desconto */
+#desconto {
+  text-align: center;
+  font-size: 1.2rem; /* Tamanho de fonte ajustado */
+  margin: 0 auto; /* Remove deslocamentos laterais */
+  padding: 0.3rem;
+  line-height: 1.5; /* Melhor espaçamento entre linhas */
+}
+#cumpomm{
+  margin: 0 auto;
+}
+footer{
+  display: none;
+}
+.form-section{
+  height: 900px;
+  width: auto;
+  margin-top: 0;
+}
+#motim{
+  display: none;
+}
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh; /* Garante que o corpo ocupe pelo menos a altura da tela */
+}
+.form-section {
+  height: 150vh; /* Faz com que a seção ocupe 100% da altura da janela de visualização */
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* Centraliza o conteúdo verticalmente, se necessário */
+  padding: 0; /* Adiciona algum preenchimento se necessário */
+}
+
+/* Opcional: Se você quiser que o formulário ocupe mais espaço */
+.promo-form {
+  flex-grow: 1; /* Faz com que o formulário ocupe o espaço restante */
+}
+}
+
+  
