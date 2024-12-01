@@ -508,6 +508,8 @@
 @media (max-width: 480px) {
   .banner-content h1 {
     font-size: 5.5rem;
+    width: 100%;
+    background-size: cover;
   }
 
   .banner-content p {
@@ -533,7 +535,15 @@
   margin: 0 auto;
 }
 footer{
-  display: none;
+  display: flex;
+    flex-direction: column;
+    align-items: center; /* Centraliza os itens horizontalmente */
+    justify-content: center; /* Centraliza os itens verticalmente */
+    text-align: center; /* Centraliza o texto */
+    margin-left: -80px;
+    margin-top: 230px;
+    background-color: white;
+  
 }
 .form-section{
   height: 900px;
@@ -541,7 +551,10 @@ footer{
   margin-top: 0;
 }
 #motim{
-  display: none;
+  height: 25vh;
+  width: 300px;
+  margin: auto;
+  background-size: cover;
 }
 body {
   display: flex;
@@ -549,17 +562,19 @@ body {
   min-height: 100vh; /* Garante que o corpo ocupe pelo menos a altura da tela */
 }
 .form-section {
-  height: 150vh; /* Faz com que a seção ocupe 100% da altura da janela de visualização */
+  height: 120vh; /* Faz com que a seção ocupe 100% da altura da janela de visualização */
   display: flex;
   flex-direction: column;
   justify-content: center; /* Centraliza o conteúdo verticalmente, se necessário */
   padding: 0; /* Adiciona algum preenchimento se necessário */
 }
-
-/* Opcional: Se você quiser que o formulário ocupe mais espaço */
-.promo-form {
-  flex-grow: 1; /* Faz com que o formulário ocupe o espaço restante */
+#chama{
+  background-size: contain;
+  height: 80vh;
+  width: 100%;
 }
+
+
 }
 
   
