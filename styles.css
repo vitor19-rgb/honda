@@ -541,7 +541,7 @@ footer{
     justify-content: center; /* Centraliza os itens verticalmente */
     text-align: center; /* Centraliza o texto */
     margin-left: -80px;
-    margin-top: 230px;
+    margin-top: 250px;
     background-color: white;
   
 }
@@ -570,7 +570,7 @@ body {
 }
 #chama{
   background-size: contain;
-  height: 80vh;
+  height: 90vh;
   width: 100%;
 }
 
